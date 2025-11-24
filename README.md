@@ -1,4 +1,4 @@
-# Safety Line Data Science & Engineering Technical Test
+# Safety Line Data Science & Engineering 
 
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue.svg)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-1.2.4%2B-green.svg)](https://pandas.pydata.org/)
