@@ -1,0 +1,41 @@
+# Use Python 3.9 as the base image
+FROM python:3.9-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Set environment variables
+# Prevents Python from writing pyc files to disc
+ENV PYTHONDONTWRITEBYTECODE=1
+# Prevents Python from buffering stdout and stderr
+ENV PYTHONUNBUFFERED=1
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements file first (for better caching)
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Copy the ML package installation file
+# First, we need to copy the built package
+COPY dist/ml_model_sita_internship-0.1.0.tar.gz /tmp/
+
+# Install the ML package
+RUN pip install --no-cache-dir /tmp/ml_model_sita_internship-0.1.0.tar.gz
+
+# Copy the Flask application code
+COPY app.py .
+
+# Expose the port the app runs on
+EXPOSE 5000
+
+# Set the default command to run the application
+# Using gunicorn for production (better than Flask's development server)
+CMD ["python", "app.py"]

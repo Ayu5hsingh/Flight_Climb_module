@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+ml_model_sita_internship/OrdinaryLeastSquaresRegression.py
+ml_model_sita_internship/__init__.py
+ml_model_sita_internship/question2.py
+ml_model_sita_internship.egg-info/PKG-INFO
+ml_model_sita_internship.egg-info/SOURCES.txt
+ml_model_sita_internship.egg-info/dependency_links.txt
+ml_model_sita_internship.egg-info/requires.txt
+ml_model_sita_internship.egg-info/top_level.txt
