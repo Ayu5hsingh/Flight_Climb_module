@@ -7,7 +7,7 @@
 
 ## 📋 Overview
 
-This repository contains solutions to the Safety Line (SITA FOR AIRCRAFT) Data Science & Engineering technical assessment. The test evaluates practical skills in data processing, machine learning, API development, and deployment workflows commonly used in aviation data science environments.
+The test evaluates practical skills in data processing, machine learning, API development, and deployment workflows commonly used in aviation data science environments.
 
 ## 🎯 Project Objectives
 
@@ -38,24 +38,6 @@ The technical test is designed to assess:
 
 ## 📁 Project Structure
 
-```
-.
-├── question1/
-│   ├── signals_altitude.pkl      # Flight altitude data (feet)
-│   ├── signals_fuel_flow.pkl     # Fuel consumption data (lb/s)
-│   ├── signals_speed.pkl         # Aircraft speed data (km/h)
-│   ├── signals_wind.pkl          # Wind speed data (knots)
-│   └── analysis_notebook.ipynb   # Data exploration & modeling
-│
-├── question2/
-│   ├── question2.py              # ML module for packaging
-│   ├── setup.py                  # Package configuration
-│   ├── api.py                    # Flask API implementation
-│   ├── Dockerfile                # Container specification
-│   └── requirements.txt          # Python dependencies
-│
-└── README.md
-```
 
 ## 🚀 Question 1: Fuel Flow Modeling
 
@@ -141,37 +123,6 @@ Analyze simulated flight signals to build predictive models for fuel consumption
 - **FastAPI**: Async-native alternative to Flask
 - **Kubernetes**: Container orchestration for horizontal scaling
 
-## 🔧 Installation & Usage
-
-### Prerequisites
-```bash
-python >= 3.7
-pandas >= 1.2.4
-```
-
-### Question 1: Run Analysis
-```bash
-cd question1
-jupyter notebook analysis_notebook.ipynb
-```
-
-### Question 2: Install Package
-```bash
-cd question2
-pip install dist/question2-package.tar.gz
-```
-
-### Run Flask API
-```bash
-python api.py
-# API available at http://localhost:5000
-```
-
-### Docker Deployment
-```bash
-docker build -t sfa-ml-api .
-docker run -p 5000:5000 sfa-ml-api
-```
 
 ## 🎓 Skills Demonstrated
 
@@ -206,9 +157,6 @@ Wind speed analysis reveals:
 - GraphQL API alternative
 - Kubernetes deployment manifests
 
-## 📝 License
-
-This project is part of a technical assessment for Safety Line / SITA FOR AIRCRAFT.
 
 ---
 
